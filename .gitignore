@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+OUTPUTS/
+.venv/
+venv/
+build/
+dist/
+*.spec
+.DS_Store
+
+# Local production files; only the anonymized example input is versioned.
+input.csv
+input.numbers
+config.xlsx
+lable.dxf

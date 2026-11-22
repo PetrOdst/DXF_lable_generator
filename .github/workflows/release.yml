@@ -1,0 +1,109 @@
+name: Build release packages
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            name: windows-11
+          - os: ubuntu-22.04
+            name: linux-x86_64
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        if: runner.os == 'Windows'
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install system libraries for Tk on Linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y python3 python3-venv python3-tk tk-dev
+
+      - name: Set up Linux Python environment
+        if: runner.os == 'Linux'
+        run: |
+          python3 -m venv .venv-build
+          echo "$GITHUB_WORKSPACE/.venv-build/bin" >> "$GITHUB_PATH"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements-build.txt
+
+      - name: Package Windows application
+        if: runner.os == 'Windows'
+        run: >-
+          python -m PyInstaller --noconfirm --clean --onefile --windowed
+          --name DXF_Label_Generator
+          --add-data "config.csv;."
+          --add-data "input.example.csv;."
+          --add-data "fonts/Stardos_Stencil/StardosStencil-Bold.ttf;fonts/Stardos_Stencil"
+          main.py
+
+      - name: Package Linux application
+        if: runner.os == 'Linux'
+        run: >-
+          python -m PyInstaller --noconfirm --clean --onefile --windowed
+          --name DXF_Label_Generator
+          --add-data "config.csv:."
+          --add-data "input.example.csv:."
+          --add-data "fonts/Stardos_Stencil/StardosStencil-Bold.ttf:fonts/Stardos_Stencil"
+          main.py
+
+      - name: Include font license (Windows)
+        if: runner.os == 'Windows'
+        run: Copy-Item fonts/Stardos_Stencil/OFL.txt dist/OFL.txt
+
+      - name: Include font license (Linux)
+        if: runner.os == 'Linux'
+        run: cp fonts/Stardos_Stencil/OFL.txt dist/OFL.txt
+
+      - name: Archive Linux executable
+        if: runner.os == 'Linux'
+        run: tar -czf dist/DXF_Label_Generator-linux-x86_64.tar.gz -C dist DXF_Label_Generator OFL.txt
+
+      - name: Upload Windows package
+        if: runner.os == 'Windows'
+        uses: actions/upload-artifact@v4
+        with:
+          name: DXF_Label_Generator-windows-11
+          path: |
+            dist/DXF_Label_Generator.exe
+            dist/OFL.txt
+
+      - name: Upload Linux package
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: DXF_Label_Generator-linux-x86_64
+          path: dist/DXF_Label_Generator-linux-x86_64.tar.gz
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download built packages
+        uses: actions/download-artifact@v4
+        with:
+          path: release-assets
+          merge-multiple: true
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: release-assets/*
