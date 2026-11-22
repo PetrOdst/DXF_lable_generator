@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">Příklad vstupní tabulky</title>
+  <desc id="desc">Tabulka se třemi sloupci ID, označení a množství a dvěma příkladovými řádky.</desc>
+  <rect width="900" height="300" rx="18" fill="#edf2f7"/>
+  <rect x="36" y="30" width="828" height="240" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="36" y="30" width="828" height="60" rx="12" fill="#1e293b"/>
+  <path d="M36 78h828v12H36z" fill="#1e293b"/>
+  <text x="90" y="69" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">ID</text>
+  <text x="290" y="69" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Označení</text>
+  <text x="630" y="69" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Množství</text>
+  <path d="M250 30v240M590 30v240M36 150h828M36 210h828" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="90" y="130" fill="#0f172a" font-family="Arial,sans-serif" font-size="21">1</text>
+  <text x="290" y="130" fill="#0f172a" font-family="Arial,sans-serif" font-size="21" font-weight="700">E-12</text>
+  <text x="630" y="130" fill="#0f172a" font-family="Arial,sans-serif" font-size="21">2 ks</text>
+  <text x="90" y="190" fill="#0f172a" font-family="Arial,sans-serif" font-size="21">2</text>
+  <text x="290" y="190" fill="#0f172a" font-family="Arial,sans-serif" font-size="21" font-weight="700">C-45</text>
+  <text x="630" y="190" fill="#0f172a" font-family="Arial,sans-serif" font-size="21">1 ks</text>
+  <text x="72" y="246" fill="#64748b" font-family="Arial,sans-serif" font-size="16">Jeden řádek = jeden DXF soubor. Množství říká obsluze, kolik kusů vyrobit.</text>
+</svg>

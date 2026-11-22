@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+  <title id="title">Okno generátoru DXF</title>
+  <desc id="desc">Schéma okna aplikace s výběrem tabulky a výstupní složky, počtem záznamů a tlačítkem Vygeneruj.</desc>
+  <rect width="960" height="430" rx="18" fill="#edf2f7"/>
+  <rect x="30" y="24" width="900" height="382" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+  <path d="M44 24h872a14 14 0 0 1 14 14v42H30V38a14 14 0 0 1 14-14" fill="#1e293b"/>
+  <circle cx="56" cy="50" r="7" fill="#fb7185"/><circle cx="80" cy="50" r="7" fill="#fbbf24"/><circle cx="104" cy="50" r="7" fill="#34d399"/>
+  <text x="480" y="56" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="18" font-weight="700">DXF Label Generator</text>
+  <text x="72" y="124" fill="#334155" font-family="Arial,sans-serif" font-size="19" font-weight="700">Vstupní tabulka</text>
+  <rect x="260" y="95" width="500" height="48" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="278" y="126" fill="#334155" font-family="Arial,sans-serif" font-size="18">input.xlsx</text>
+  <rect x="780" y="95" width="120" height="48" rx="7" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="840" y="126" text-anchor="middle" fill="#1e293b" font-family="Arial,sans-serif" font-size="17">Vybrat…</text>
+  <text x="72" y="190" fill="#334155" font-family="Arial,sans-serif" font-size="19" font-weight="700">Výstupní složka</text>
+  <rect x="260" y="160" width="500" height="48" rx="7" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="278" y="191" fill="#475569" font-family="Arial,sans-serif" font-size="16">Dokumenty / DXF_Label_Generator / OUTPUTS</text>
+  <rect x="780" y="160" width="120" height="48" rx="7" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="840" y="191" text-anchor="middle" fill="#1e293b" font-family="Arial,sans-serif" font-size="17">Vybrat…</text>
+  <text x="72" y="251" fill="#0f172a" font-family="Arial,sans-serif" font-size="21" font-weight="700">Záznamů: 2</text>
+  <text x="260" y="251" fill="#0f172a" font-family="Arial,sans-serif" font-size="21" font-weight="700">Celkem kusů: 3</text>
+  <rect x="72" y="274" width="828" height="16" rx="8" fill="#e2e8f0"/>
+  <text x="72" y="337" fill="#475569" font-family="Arial,sans-serif" font-size="18">Připraveno</text>
+  <rect x="722" y="310" width="178" height="56" rx="9" fill="#2563eb"/>
+  <text x="811" y="346" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Vygeneruj</text>
+</svg>

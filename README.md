@@ -2,6 +2,8 @@
 
 Jednoduché GUI pro vytvoření jednoho DXF štítku na každý záznam ve vstupní tabulce. Množství zůstává jen informací pro operátora a je uvedeno v názvu souboru.
 
+**Návod pro obsluhu:** [Uživatelská příručka s obrázky](UZIVATELSKA_PRIRUCKA.md).
+
 ## Spuštění ze zdrojového kódu
 
 Potřebujete Python 3.10 nebo novější. Na macOS otevřete aplikaci **Terminál** a přejděte do složky projektu. Pokud je projekt ve složce Stažené:
