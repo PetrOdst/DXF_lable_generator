@@ -4,6 +4,22 @@ Jednoduché GUI pro vytvoření jednoho DXF štítku na každý záznam ve vstup
 
 **Návod pro obsluhu:** [Uživatelská příručka s obrázky](UZIVATELSKA_PRIRUCKA.md).
 
+## Rychlý návod
+
+1. Připravte CSV nebo Excel `.xlsx` se sloupci **ID**, **Označení** a **Množství**. Například:
+
+   ```text
+   ID;Označení;Množství
+   1;E-12;2
+   2;C-45;1
+   ```
+
+2. Spusťte aplikaci a vyberte vstupní tabulku. Zkontrolujte počet záznamů a celkový počet kusů.
+3. Vyberte složku pro výstup a stiskněte **Vygeneruj**.
+4. Po dokončení najdete ve vybrané složce jeden DXF soubor na každý řádek. Množství v názvu souboru je počet kusů pro obsluhu stroje, ne počet kopií DXF.
+
+Konfigurace štítku se načítá automaticky z `config.csv` dodaného s aplikací. Pokud se text při nastavené velikosti nevejde mezi otvory, aplikace upozorní na záznam, který je třeba upravit.
+
 ## Spuštění ze zdrojového kódu
 
 Potřebujete Python 3.10 nebo novější. Na macOS otevřete aplikaci **Terminál** a přejděte do složky projektu. Pokud je projekt ve složce Stažené:
