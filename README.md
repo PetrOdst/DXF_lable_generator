@@ -16,7 +16,7 @@ Jednoduché GUI pro vytvoření jednoho DXF štítku na každý záznam ve vstup
 
 2. Spusťte aplikaci a vyberte vstupní tabulku. Zkontrolujte počet záznamů a celkový počet kusů.
 3. Vyberte složku pro výstup a stiskněte **Vygeneruj**.
-4. Po dokončení najdete ve vybrané složce jeden DXF soubor na každý řádek. Množství v názvu souboru je počet kusů pro obsluhu stroje, ne počet kopií DXF.
+4. Po dokončení najdete ve vybrané složce jeden DXF soubor na každý řádek, například `2x_E-12.dxf`. Název obsahuje množství a označení; ID se vynechává. Množství je počet kusů pro obsluhu stroje, ne počet kopií DXF.
 
 Konfigurace štítku se načítá automaticky z `config.csv` dodaného s aplikací. Pokud se text při nastavené velikosti nevejde mezi otvory, aplikace upozorní na záznam, který je třeba upravit.
 

@@ -19,6 +19,7 @@ Jde o projekt generátoru DXF štítků z CSV konfigurace a tabulky položek. Po
 - Vstupy validuj před generováním; chyby formuluj česky, konkrétně a s označením problematického souboru/řádku/hodnoty.
 - Distribuční balíčky cílí na Windows 11 a Linux; zdrojový kód má zůstat spustitelný i na macOS. Nepřidávej platformově specifické cesty bez důvodu.
 - Při tvorbě názvů souborů bezpečně zpracuj diakritiku, mezery a znaky nepovolené operačním systémem. Zabraň nechtěnému přepsání existujících výstupů.
+- Názvy DXF tvoř ve formátu `MNOŽSTVÍx_OZNAČENÍ.dxf`; ID položky do názvu nezahrnuj.
 - Udržuj dokumentaci v souladu s implementací; požadavky a nejistoty zaznamenávej v `PROJECT_CONTENT.md`.
 
 ## Ověřování

@@ -53,11 +53,11 @@ Před začátkem aplikace kontroluje, zda se text při nastavené velikosti vejd
 
 ## 5. Najděte výsledek
 
-Ve vybrané složce bude jeden DXF na každý záznam. Název obsahuje ID, označení a počet kusů:
+Ve vybrané složce bude jeden DXF na každý záznam. Název začíná počtem kusů a pokračuje označením; ID v názvu není:
 
 ![Příklad výstupních souborů](docs/images/output-files.svg)
 
-Například `1_E-12_2x.dxf` znamená jeden DXF štítek, který má obsluha vyrobit dvakrát. Pokud by stejnojmenný soubor už existoval, aplikace přidá k názvu pořadové číslo a původní soubor nepřepíše.
+Například `2x_E-12.dxf` znamená jeden DXF štítek, který má obsluha vyrobit dvakrát. Pokud by stejnojmenný soubor už existoval, aplikace přidá k názvu pořadové číslo a původní soubor nepřepíše.
 
 ## Nastavení štítku
 

@@ -13,7 +13,7 @@ Vytvořit jednoduchý generátor DXF štítků pro vstupní tabulku. Uživatel v
 ## Zamýšlený výstup
 
 - Pro každý platný řádek vstupní tabulky vytvořit právě jeden DXF štítek a uložit jej do uživatelem vybrané složky; ve zdrojovém režimu je výchozí `OUTPUTS/`.
-- Název souboru má vycházet z ID, textu a množství, například `01_Vstup_2x.dxf`.
+- Název souboru má upřednostnit informace důležité pro obsluhu a mít formát `MNOŽSTVÍx_OZNAČENÍ.dxf`, například `2x_E-12.dxf`. ID se v názvu nepoužívá.
 - Množství v názvu je instrukce pro operátora stroje, kolikrát má štítek vyrobit/zadat. Neznamená počet DXF souborů ani násobení výstupu.
 - Při tvorbě názvů ošetřit znaky nepovolené v názvech souborů a kolize názvů.
 

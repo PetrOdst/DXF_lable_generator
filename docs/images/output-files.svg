@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330" role="img" aria-labelledby="title desc">
   <title id="title">Ukázka vytvořených DXF souborů</title>
-  <desc id="desc">Ve výstupní složce jsou dva DXF soubory pojmenované podle ID, označení a množství.</desc>
+  <desc id="desc">Ve výstupní složce jsou dva DXF soubory pojmenované podle množství a označení.</desc>
   <rect width="900" height="330" rx="18" fill="#edf2f7"/>
   <rect x="55" y="25" width="790" height="280" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
   <path d="M55 37a12 12 0 0 1 12-12h766a12 12 0 0 1 12 12v53H55z" fill="#1e293b"/>
   <text x="88" y="66" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Výstupní složka</text>
   <text x="88" y="119" fill="#2563eb" font-family="Arial,sans-serif" font-size="18">DXF</text>
-  <text x="160" y="120" fill="#0f172a" font-family="Arial,sans-serif" font-size="20">1_E-12_2x.dxf</text>
+  <text x="160" y="120" fill="#0f172a" font-family="Arial,sans-serif" font-size="20">2x_E-12.dxf</text>
   <text x="160" y="148" fill="#64748b" font-family="Arial,sans-serif" font-size="15">Jeden štítek; operátor vyrobí 2 kusy</text>
   <path d="M82 166h736" stroke="#e2e8f0" stroke-width="2"/>
   <text x="88" y="209" fill="#2563eb" font-family="Arial,sans-serif" font-size="18">DXF</text>
-  <text x="160" y="210" fill="#0f172a" font-family="Arial,sans-serif" font-size="20">2_C-45_1x.dxf</text>
+  <text x="160" y="210" fill="#0f172a" font-family="Arial,sans-serif" font-size="20">1x_C-45.dxf</text>
   <text x="160" y="238" fill="#64748b" font-family="Arial,sans-serif" font-size="15">Jeden štítek; operátor vyrobí 1 kus</text>
   <rect x="82" y="260" width="736" height="1" fill="#e2e8f0"/>
 </svg>

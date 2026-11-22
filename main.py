@@ -143,6 +143,10 @@ def safe_part(value: str) -> str:
     return value or "label"
 
 
+def output_filename(record: Record) -> str:
+    return f"{record.amount}x_{safe_part(record.text)}.dxf"
+
+
 class OutlinePen(BasePen):
     """Collect closed glyph contours as sampled straight segments."""
 
@@ -365,7 +369,7 @@ class App(tk.Tk):
         def worker():
             try:
                 for index, record in enumerate(records, 1):
-                    name = f"{safe_part(record.item_id)}_{safe_part(record.text)}_{record.amount}x.dxf"
+                    name = output_filename(record)
                     destination = output / name
                     if destination.exists():
                         stem, suffix, version = destination.stem, destination.suffix, 2
